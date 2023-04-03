@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 10;
-    public float leftRightSpeed = 4;
+    public float moveSpeed = 5;
     static public bool canMove = false;
     public bool jumping = false;
     public bool comingDown = false;
     public GameObject playerObject;
+
+    public Vector3 LeftMiddleRight = new Vector3(-2.5f, 0f, 2.5f);
+    public float laneChangeSpeed = 3;
+    private char moveTo = 'm';
+    private Vector3 newLane;
+    private bool changinglanes = false;
 
     // Start is called before the first frame update
     void Start(){}
@@ -17,30 +22,46 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Vector3.forward is movement along the z-axis
+        // Move Player Forward
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
         if(canMove == true)
         {
             // Move left button pressed
-            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) & changinglanes == false)
             {
-                if(this.gameObject.transform.position.x > LevelBoundary.leftSide)
+                //Right Lane -> Middle Lane
+                if(moveTo == 'r' & changinglanes == false)
                 {
-                    transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed);
+                    moveTo = 'm';
+                    changinglanes = true;
+                }
+                //Middle Lane -> Left Lane
+                if (moveTo == 'm' & changinglanes == false)
+                {
+                    moveTo = 'l';
+                    changinglanes = true;
                 }
             }
-            // Move left button pressed
-            if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            // Move Right button pressed
+            if((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) & changinglanes == false)
             {
-                if (this.gameObject.transform.position.x < LevelBoundary.rightSide)
+                //Left Lane -> Middle Lane
+                if (moveTo == 'l' & changinglanes == false)
                 {
-                    transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -1);
+                    moveTo = 'm';
+                    changinglanes = true;
+                }
+                //Middle Lane -> Right Lane
+                if (moveTo == 'm' & changinglanes == false)
+                {
+                    moveTo = 'r';
+                    changinglanes = true;
                 }
             }
             // Jump
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
             {
-                if (jumping == false)
+               if (jumping == false)
                 {
                     jumping = true;
                     playerObject.GetComponent<Animator>().Play("Jump");
@@ -58,6 +79,48 @@ public class PlayerMovement : MonoBehaviour
                     transform.Translate(Vector3.up * Time.deltaTime * -3, Space.World);
                 }
             }
+
+            if (changinglanes == true)
+            {
+                if(moveTo == 'l')
+                {
+                    if (transform.position.x == LeftMiddleRight.x)
+                    {
+                        changinglanes = false;
+                    }
+                    else
+                    {
+                        newLane = new Vector3(LeftMiddleRight.x, transform.position.y, transform.position.z);
+                    }
+                }
+                else if (moveTo == 'm')
+                {
+                    if (transform.position.x == LeftMiddleRight.y)
+                    {
+                        changinglanes = false;
+                    }
+                    else
+                    {
+                        newLane = new Vector3(LeftMiddleRight.y, transform.position.y, transform.position.z);
+                    }
+                }
+                else if(moveTo == 'r')
+                {
+                    if (transform.position.x == LeftMiddleRight.z)
+                    {
+                        changinglanes = false;
+                    }
+                    else
+                    {
+                        newLane = new Vector3(LeftMiddleRight.z, transform.position.y, transform.position.z);
+                    }
+                }
+
+                if (changinglanes == true)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, newLane, Time.deltaTime * laneChangeSpeed);
+                }
+            }
         }
     }
 
@@ -70,5 +133,4 @@ public class PlayerMovement : MonoBehaviour
         comingDown = false;
         playerObject.GetComponent<Animator>().Play("Standard Run");
     }
-
 }

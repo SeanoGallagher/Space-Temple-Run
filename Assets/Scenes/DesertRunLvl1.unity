@@ -6011,10 +6011,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  leftRightSpeed: 5
   jumping: 0
   comingDown: 0
   playerObject: {fileID: 386835720}
+  LeftMiddleRight: {x: -2.5, y: 0, z: 2.5}
+  laneChangeSpeed: 4
 --- !u!65 &474890568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21261,7 +21262,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 42189515e7d6b2f4e986e8067d3010e6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
