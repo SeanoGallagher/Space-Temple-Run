@@ -131,6 +131,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         jumping = false;
         comingDown = false;
-        playerObject.GetComponent<Animator>().Play("Standard Run");
+        if (canMove == true) { playerObject.GetComponent<Animator>().Play("Standard Run"); }
     }
 }

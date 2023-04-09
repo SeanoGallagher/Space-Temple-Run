@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    public string parentName;
+    GenerateLevel sn;
 
     void Start()
     {
-        parentName = transform.name;
+        sn = GameObject.Find("LevelControl").GetComponent<GenerateLevel>();
+    }
+    void Update(){}
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Passed through trigger");
         StartCoroutine(DestroyClone());
     }
 
-    void Update()
-    {}
-
     IEnumerator DestroyClone()
     {
-        yield return new WaitForSeconds(50);
-        if (parentName == "Section(Clone)") ;
-        {
-            Destroy(gameObject);
-        }
+        yield return new WaitForSeconds(5);
+        Destroy(this.transform.parent.gameObject);
+        sn.NextSection();
     }
 }
