@@ -23,7 +23,7 @@ public class GenerateLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (creatingSection == false && totalsections < 10)
+        if (creatingSection == false && totalsections < 8)
         {
             creatingSection = true;
             StartCoroutine(GenerateSection());
@@ -44,7 +44,7 @@ public class GenerateLevel : MonoBehaviour
         // Will never generate last num, i.e. possible results with (0, 3) is 0, 1, 2
         totalsections++;
         countdownchange++;
-        if (countdownchange > 4)
+        if (countdownchange > 5)
         {
             if (Random.value > 0.5f)
             {
