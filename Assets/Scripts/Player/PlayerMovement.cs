@@ -11,9 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerObject;
 
     public Vector3 LeftMiddleRight = new Vector3(-2.5f, 0f, 2.5f);
-    private Vector3 turnLeft = new Vector3(0, -25f, 0);
-    private Vector3 turnRight = new Vector3(0, 25f, 0);
-    private Vector3 turnDirection;
     public float laneChangeSpeed = 3;
     private char moveTo = 'm';
     private Vector3 newLane;
@@ -44,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
                     moveTo = 'l';
                     changinglanes = true;
                 }
-                turnDirection = turnLeft;
             }
             // Move Right button pressed
             if((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) & changinglanes == false)
@@ -61,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
                     moveTo = 'r';
                     changinglanes = true;
                 }
-                turnDirection = turnRight;
             }
             // Jump
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
@@ -69,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
                if (jumping == false)
                 {
                     jumping = true;
-                    playerObject.GetComponent<Animator>().Play("Astronaut_Jump");
+                    playerObject.GetComponent<Animator>().Play("Jump");
                     StartCoroutine(JumpSequence());
                 }
             }
@@ -124,10 +119,6 @@ public class PlayerMovement : MonoBehaviour
                 if (changinglanes == true)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, newLane, Time.deltaTime * laneChangeSpeed);
-                    playerObject.transform.eulerAngles = turnDirection;
-                } else
-                {
-                    playerObject.transform.eulerAngles = Vector3.zero;
                 }
             }
         }
@@ -140,6 +131,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         jumping = false;
         comingDown = false;
-        if (canMove == true) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
+        if (canMove == true) { playerObject.GetComponent<Animator>().Play("Standard Run"); }
     }
 }
