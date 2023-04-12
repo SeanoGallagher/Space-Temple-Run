@@ -44,7 +44,7 @@ public class GenerateLevel : MonoBehaviour
         // Will never generate last num, i.e. possible results with (0, 3) is 0, 1, 2
         totalsections++;
         countdownchange++;
-        if (countdownchange > 10)
+        if (countdownchange > 4)
         {
             if (Random.value > 0.5f)
             {
@@ -60,7 +60,8 @@ public class GenerateLevel : MonoBehaviour
         {
             curObj = indoors;
         }
-        secNum = Random.Range(0, curObj.transform.childCount);
+        secNum = Random.Range(1, curObj.transform.childCount);
+        if (countdownchange == 0) { secNum = 0; }
         GameObject go;
         go = Instantiate(curObj.transform.GetChild(secNum).gameObject, new Vector3(0, 0, zPos), Quaternion.identity);
         go.transform.name = "Section " + totalsections + "(" + (worldState ? "Indoors " : "Outdoors ") + (secNum+1) + ")";
