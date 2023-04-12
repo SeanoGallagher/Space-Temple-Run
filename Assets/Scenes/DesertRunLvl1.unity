@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.019769933, g: 0.010083613, b: 0.0055536847, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3936,11 +3936,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: dcf51a1e867a87e4596f1c757cbdb947, type: 3}
   m_PrefabInstance: {fileID: 190161112}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &192633759 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1527527227468396489, guid: 9ce165dd222504a7dada2f13901e2cbd, type: 3}
-  m_PrefabInstance: {fileID: 1633234123}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &194585491
 GameObject:
@@ -21307,11 +21302,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927107791}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &929398711 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1527527227468396489, guid: 9ce165dd222504a7dada2f13901e2cbd, type: 3}
-  m_PrefabInstance: {fileID: 256927293}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &931590614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1e7949aa66587e540b15b43c6b92a25d, type: 3}
@@ -26146,43 +26136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9213056866625f644a3e54849a450996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openSpeedCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.8
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  direction: 0
-  openDistance: -1
-  openSpeedMultiplier: 0.25
-  doorBody: {fileID: 192633759}
 --- !u!65 &1131148967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37674,7 +37627,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 42189515e7d6b2f4e986e8067d3010e6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ec1950f32ccd3624485a341ce39eabc6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
@@ -38257,43 +38210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9213056866625f644a3e54849a450996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openSpeedCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.8
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  direction: 0
-  openDistance: -1
-  openSpeedMultiplier: 0.25
-  doorBody: {fileID: 929398711}
 --- !u!65 &1669609625
 BoxCollider:
   m_ObjectHideFlags: 0
