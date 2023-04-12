@@ -16,10 +16,16 @@ public class ObstacleCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        bool jumping = PlayerMovement.jumping;
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         thePlayer.GetComponent<PlayerMovement>().enabled = false;
         PlayerMovement.canMove = false;
-        charModel.GetComponent<Animator>().Play("Stumble Backwards");
+        if(jumping){
+            charModel.GetComponent<Animator>().Play("Astronaut_AirCrash");
+        }
+        else{
+            charModel.GetComponent<Animator>().Play("Astronaut_GroundCrash");
+        }
         levelControl.GetComponent<LevelDistance>().enabled = false;
         crashThud.Play();
         camAnim.GetComponent<Animator>().enabled = true;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -2859,7 +2859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -3430,7 +3430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -4151,7 +4151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -4313,36 +4313,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1938cd5cf7941f548b756cdb94a425fb, type: 3}
---- !u!1 &386835720 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-  m_PrefabInstance: {fileID: 1142104397}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &386835721 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-  m_PrefabInstance: {fileID: 1142104397}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &386835722
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386835720}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f121b03a79c3c5941898506fd09e4983, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &390151470
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,7 +4937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -6186,9 +6156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumping: 0
   comingDown: 0
-  playerObject: {fileID: 386835720}
+  playerObject: {fileID: 1233534177}
   LeftMiddleRight: {x: -2.5, y: 0, z: 2.5}
   laneChangeSpeed: 4
 --- !u!65 &474890568
@@ -6266,8 +6235,8 @@ Transform:
   m_LocalScale: {x: 0.8, y: 1.5, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 386835721}
   - {fileID: 963194228}
+  - {fileID: 1233534178}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6565,7 +6534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -6959,7 +6928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -8677,14 +8646,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outdoors: {fileID: 356701774}
   indoors: {fileID: 0}
-  Section:
-  - {fileID: 792503880}
-  - {fileID: 609610093}
-  - {fileID: 1519955225}
   zPos: 50
   creatingSection: 0
   secNum: 0
   totalsections: 0
+  countdownchange: 8
+  worldState: 0
 --- !u!114 &624699074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11167,7 +11134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -12090,7 +12057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -12280,7 +12247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -12816,7 +12783,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 474890571}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 27.285, y: 0, z: 0}
 --- !u!95 &963194229
 Animator:
@@ -13297,7 +13264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -13413,7 +13380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -13529,7 +13496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -15087,75 +15054,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: 9fae9f7a7664c4c47a4fd4e9eedf6d6c, type: 3}
   m_PrefabInstance: {fileID: 1956458379}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1142104397
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 474890571}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8000001
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.49199998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.14999986
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
-      propertyPath: m_Name
-      value: Ch09_nonPBR@Standard Run
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1a5f2ae430e0d9243ad53a39c57d2a00, type: 3}
 --- !u!1001 &1145579421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15676,7 +15574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -15749,6 +15647,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcf51a1e867a87e4596f1c757cbdb947, type: 3}
+--- !u!1 &1233534177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+  m_PrefabInstance: {fileID: 1962715654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1233534178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+  m_PrefabInstance: {fileID: 1962715654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1233534179
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233534177}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a477876c042b4e4c90369eb4c49cfdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &1241416808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: dfed2e9fb3d8ac84da441095f9422543, type: 3}
@@ -15958,7 +15886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -17969,7 +17897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -18462,7 +18390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -18588,7 +18516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -19783,7 +19711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -21807,7 +21735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -22223,7 +22151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -24340,7 +24268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -24962,7 +24890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
@@ -25678,6 +25606,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: dcf51a1e867a87e4596f1c757cbdb947, type: 3}
   m_PrefabInstance: {fileID: 1410841278}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1962715654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 474890571}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
+      propertyPath: m_Name
+      value: astronaut
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
 --- !u!4 &1969850628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 34dfeb3f659c70946a7698f1846d752b, type: 3}
@@ -26480,7 +26477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 474890566}
-  charModel: {fileID: 386835720}
+  charModel: {fileID: 1233534177}
   camAnim: {fileID: 963194225}
   levelControl: {fileID: 624699070}
   crashThud: {fileID: 1943440514}
