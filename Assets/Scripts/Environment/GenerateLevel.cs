@@ -13,6 +13,7 @@ public class GenerateLevel : MonoBehaviour
     public int countdownchange = 8;
     public bool worldState = false;
     private GameObject curObj;
+    private int lastSec = 0;
 
     // Start is called before the first frame update
     void Start() 
@@ -60,8 +61,11 @@ public class GenerateLevel : MonoBehaviour
         {
             curObj = indoors;
         }
-        secNum = Random.Range(1, curObj.transform.childCount);
+        int max = curObj.transform.childCount;
+        secNum = Random.Range(1, max);
         if (countdownchange == 0) { secNum = 0; }
+        if (lastSec == secNum) { secNum = Mathf.Min(secNum + 1, max - 1); if (secNum == (max - 1)) { secNum = 1; } }
+        lastSec = secNum;
         GameObject go;
         go = Instantiate(curObj.transform.GetChild(secNum).gameObject, new Vector3(0, 0, zPos), Quaternion.identity);
         go.transform.name = "Section " + totalsections + "(" + (worldState ? "Indoors " : "Outdoors ") + (secNum+1) + ")";
