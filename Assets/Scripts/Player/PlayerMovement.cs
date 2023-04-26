@@ -7,14 +7,19 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5;
     static public bool canMove = false;
     public static bool jumping = false;
-    public bool comingDown = false;
+    public static bool sliding = false;
+    public static bool comingDown = false;
+    public static bool gettingup = false;
     public GameObject playerObject;
+    public GameObject alienObject;
 
     public Vector3 LeftMiddleRight = new Vector3(-2.5f, 0f, 2.5f);
     private Vector3 turnLeft = new Vector3(0, -25f, 0);
     private Vector3 turnRight = new Vector3(0, 25f, 0);
     private Vector3 turnDirection;
+    public static Vector3 floor = new Vector3(-0.6f, 1.25f, -0.5f); //Astronaut, Player, Alien
     public float laneChangeSpeed = 3;
+    public static float verticalSpeed = 2;
     private char moveTo = 'm';
     private Vector3 newLane;
     private bool changinglanes = false;
@@ -64,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
                 turnDirection = turnRight;
             }
             // Jump
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space)) && sliding == false)
             {
                if (jumping == false)
                 {
@@ -79,9 +84,23 @@ public class PlayerMovement : MonoBehaviour
                 {
                     transform.Translate(Vector3.up * Time.deltaTime * 3, Space.World);
                 }
-                if(comingDown == true)
+            }
+
+            //Slide
+            if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && jumping == false)
+            {
+                if (sliding == false)
                 {
-                    transform.Translate(Vector3.up * Time.deltaTime * -3, Space.World);
+                    sliding = true;
+                    playerObject.GetComponent<Animator>().Play("Astronaut_Slide");
+                    StartCoroutine(SlideSequence());
+                }
+            }
+            if (sliding == true)
+            {
+                if (gettingup == false)
+                {
+                    transform.Translate(Vector3.up * Time.deltaTime * 3, Space.World);
                 }
             }
 
@@ -130,16 +149,37 @@ public class PlayerMovement : MonoBehaviour
                     playerObject.transform.eulerAngles = Vector3.zero;
                 }
             }
+
+            //Return Player to floor (fixes player flying/sinking after multiple jumps/slides)
+            if((jumping == false && transform.position.y != floor.y) || comingDown == true)
+            {
+                Vector3 gotofloor = new Vector3(transform.position.x, floor.y, transform.position.z);
+                transform.position = Vector3.MoveTowards(transform.position, gotofloor, Time.deltaTime * verticalSpeed);
+            }
         }
     }
 
     IEnumerator JumpSequence()
     {
         yield return new WaitForSeconds(0.45f);
+        alienObject.GetComponent<Animator>().Play("Jump");
         comingDown = true;
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.8f);
+        alienObject.GetComponent<Animator>().Play("Run");
         jumping = false;
         comingDown = false;
+        if (canMove == true) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
+    }
+
+    IEnumerator SlideSequence()
+    {
+        yield return new WaitForSeconds(0.6f);
+        alienObject.GetComponent<Animator>().Play("Slide");
+        gettingup = true;
+        yield return new WaitForSeconds(0.45f);
+        alienObject.GetComponent<Animator>().Play("Run");
+        sliding = false;
+        gettingup = false;
         if (canMove == true) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
     }
 }
