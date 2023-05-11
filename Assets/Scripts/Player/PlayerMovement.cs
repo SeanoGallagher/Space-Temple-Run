@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     public static Vector3 floor = new Vector3(-0.6f, 1.25f, -0.5f); //Astronaut, Player, Alien
     public float laneChangeSpeed = 3;
     public static float verticalSpeed = 2;
+    public int gravity = 3;
+    public bool gravityToggle = false;
+    public bool reverseGravity = false;
     private char moveTo = 'm';
     private Vector3 newLane;
     private bool changinglanes = false;
@@ -82,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if(comingDown == false)
                 {
-                    transform.Translate(Vector3.up * Time.deltaTime * 3, Space.World);
+                    transform.Translate(Vector3.up * Time.deltaTime * gravity, Space.World);
                 }
             }
 
@@ -161,10 +164,22 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator JumpSequence()
     {
-        yield return new WaitForSeconds(0.45f);
+        if (gravityToggle)
+        { 
+            yield return new WaitForSeconds(0.45f); 
+        } else 
+        {
+            yield return new WaitForSeconds(.45f);
+        }
         alienObject.GetComponent<Animator>().Play("Jump");
         comingDown = true;
-        yield return new WaitForSeconds(0.8f);
+        if (gravityToggle)
+        {
+            yield return new WaitForSeconds(0.8f);
+        } else
+        {
+            yield return new WaitForSeconds(0.8f);
+        }
         alienObject.GetComponent<Animator>().Play("Run");
         jumping = false;
         comingDown = false;
