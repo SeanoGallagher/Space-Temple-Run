@@ -70,15 +70,4 @@ public class OpenAirlock : MonoBehaviour
         currentDoorPosition = doorBody.localPosition;
         openTime = 0;
     }
-
-    // Deactivate the Main function when Player exit the trigger area
-    /*void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            open = false;
-            currentDoorPosition = doorBody.localPosition;
-            openTime = 0;
-        }
-    }*/
 }

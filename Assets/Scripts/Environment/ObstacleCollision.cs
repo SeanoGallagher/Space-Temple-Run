@@ -17,9 +17,12 @@ public class ObstacleCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         bool jumping = PlayerMovement.jumping;
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        thePlayer.GetComponent<PlayerMovement>().enabled = false;
         PlayerMovement.canMove = false;
+        thePlayer.GetComponent<PlayerMovement>().enabled = false;
+
+        StopCoroutine("JumpSequence");
+        StopCoroutine("SlideSequence");
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
         if(jumping){
             charModel.GetComponent<Animator>().Play("Astronaut_AirCrash");
         }
@@ -28,7 +31,7 @@ public class ObstacleCollision : MonoBehaviour
         }
         levelControl.GetComponent<LevelDistance>().enabled = false;
         crashThud.Play();
-        camAnim.GetComponent<Animator>().enabled = true;
+        camAnim.GetComponent<Animator>().enabled = false;
         levelControl.GetComponent<EndRunSequence>().enabled = true;
     }
 }

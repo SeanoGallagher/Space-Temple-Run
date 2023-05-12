@@ -18,13 +18,14 @@ public class LevelDistance : MonoBehaviour
     }
     void Update()
     {
-        if(addingDis == false){
+        if(!addingDis && PlayerMovement.canMove){
             addingDis = true;
             StartCoroutine(AddingDis());
         }
     }
 
-    IEnumerator AddingDis(){
+    IEnumerator AddingDis()
+    {
         disRun += 1;
         disDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = "" + disRun;
         disEndDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = (disRun > hiscore) ? "" + disRun + "  <b><color=red>High Score!</color></b>" : "" + disRun;

@@ -8,10 +8,10 @@ public class GenerateLevel : MonoBehaviour
     public GameObject indoors;
     public int zPos = 50;
     public bool creatingSection = false;
-    public int secNum;
-    public int totalsections = 0;
-    public int countdownchange = 8;
-    public bool worldState = false;
+    private int secNum;
+    private int totalsections = 0;
+    private int countdownchange = 0;
+    private bool worldState = false;
     private GameObject curObj;
     private int lastSec = 0;
 
@@ -71,7 +71,7 @@ public class GenerateLevel : MonoBehaviour
         go.transform.name = "Section " + totalsections + "(" + (worldState ? "Indoors " : "Outdoors ") + (secNum+1) + ")";
         go.transform.parent = GameObject.Find("Generated Sections").transform;
         zPos += 50;
-        if (totalsections >= 8) { yield return new WaitForSeconds(5); }
+        if (totalsections >= 8) { yield return new WaitForSeconds(3); }
         creatingSection = false;
     }
 }

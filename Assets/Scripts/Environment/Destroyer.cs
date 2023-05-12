@@ -14,13 +14,12 @@ public class Destroyer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Passed through trigger");
         StartCoroutine(DestroyClone());
     }
 
     IEnumerator DestroyClone()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Destroy(this.transform.parent.gameObject);
         sn.NextSection();
     }
