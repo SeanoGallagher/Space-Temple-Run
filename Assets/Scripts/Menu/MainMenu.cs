@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public TMP_Text m_CoinText;
     public TMP_Text m_DistanceText;
     public TMP_Text m_hint;
+    public GameObject storePanel;
     void Start()
     {
         m_CoinText.text = ""+PlayerPrefs.GetInt("coinCount");
@@ -26,7 +27,6 @@ public class MainMenu : MonoBehaviour
 
     public void ShowAchievements()
     {
-        
     }
 
     public void ShowStore()
