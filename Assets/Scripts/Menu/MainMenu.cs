@@ -10,11 +10,11 @@ public class MainMenu : MonoBehaviour
     public TMP_Text m_CoinText;
     public TMP_Text m_DistanceText;
     public TMP_Text m_hint;
-    public GameObject storePanel;
+    public TMP_Text m_CurrentCoinText;
+
     void Start()
     {
-        m_CoinText.text = ""+PlayerPrefs.GetInt("coinCount");
-        m_DistanceText.text = ""+PlayerPrefs.GetInt("distanceCount");
+        UpdateText();
     }
 
     void Update()
@@ -31,11 +31,20 @@ public class MainMenu : MonoBehaviour
 
     public void ShowStore()
     {
-        m_hint.text = "You have a total of " + PlayerPrefs.GetInt("totalCoins") + " Coins!";
+        //m_hint.text = "You have a total of " + PlayerPrefs.GetInt("totalCoins") + " Coins!";
     }
 
     public void WipeStats()
     {
+        Debug.Log("Wiping it all");
         PlayerPrefs.DeleteAll();
+        UpdateText();
+    }
+
+    public void UpdateText()
+    {
+        m_CoinText.text = "" + PlayerPrefs.GetInt("coinCount");
+        m_DistanceText.text = "" + PlayerPrefs.GetInt("distanceCount");
+        m_CurrentCoinText.text = "" + PlayerPrefs.GetInt("totalCoins");
     }
 }
