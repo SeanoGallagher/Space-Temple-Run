@@ -12,12 +12,20 @@ public class GenerateLevel : MonoBehaviour
     private int totalsections = 0;
     private int countdownchange = 0;
     private bool worldState = false;
+    private bool forceIndoors = false;
     private GameObject curObj;
     private int lastSec = 0;
 
     // Start is called before the first frame update
     void Start() 
     {
+        worldState = false;
+        totalsections = 0;
+        countdownchange = 0;
+        lastSec = 0;
+        secNum = 0;
+        forceIndoors = false;
+        if (forceIndoors) { lastSec = -1; }
         GenerateSection();
     }
 
@@ -45,19 +53,14 @@ public class GenerateLevel : MonoBehaviour
         // Will never generate last num, i.e. possible results with (0, 3) is 0, 1, 2
         totalsections++;
         countdownchange++;
-        if (countdownchange > 5)
+        if ((countdownchange > 5 && Random.value > 0.5f) || forceIndoors)
         {
-            if (Random.value > 0.5f)
-            {
-                worldState = !worldState;
-                countdownchange = 0;
-            }
+            worldState = !worldState;
+            countdownchange = 0;
+            forceIndoors = false;
         }
-        if (!worldState)
-        {
-            curObj = outdoors;
-        }
-        else
+        curObj = outdoors;
+        if (worldState)
         {
             curObj = indoors;
         }

@@ -29,7 +29,7 @@ public class LevelDistance : MonoBehaviour
         disRun += 1;
         disDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = "" + disRun;
         disEndDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = (disRun > hiscore) ? "" + disRun + "  <b><color=red>High Score!</color></b>" : "" + disRun;
-        yield return new WaitForSeconds(disDelay);
+        yield return new WaitForSeconds(disDelay / (PlayerMovement.moveSpeed / 5));
         addingDis = false;
     }
 

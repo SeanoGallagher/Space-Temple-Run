@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5;
+    static public float moveSpeed = 5;
     static public bool canMove = false;
     public static bool jumping = false;
     public static bool sliding = false;
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpPressed = false;
     private bool slidePressed = false;
     // Start is called before the first frame update
-    void Start(){ curfloor = floor; GravityStrength(); }
+    void Start(){ curfloor = floor; GravityStrength(); moveSpeed = 5; laneChangeSpeed = 3; }
 
     // Update is called once per frame
     void Update()
@@ -173,11 +173,11 @@ public class PlayerMovement : MonoBehaviour
         if (gravityToggle) { sec = 0.8f; sectwo = 1.2f; }
         if (canMove) { playerObject.GetComponent<Animator>().Play("Astronaut_Jump"); }
         yield return new WaitForSeconds(sec); 
-        if (canMove) { playerObject.GetComponent<Animator>().Play("Astronaut_Jump"); }
+        if (canMove && gravityToggle) { playerObject.GetComponent<Animator>().Play("Astronaut_Jump"); }
             //alienObject.GetComponent<Animator>().Play("Jump");
         comingDown = true;
         yield return new WaitForSeconds(0.4f);
-        if (canMove) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
+        if (canMove && gravityToggle) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
         yield return new WaitForSeconds(sectwo);
         //alienObject.GetComponent<Animator>().Play("Run");
         //jumping = false;
@@ -205,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
     public void GravityStrength()
     {
         gravityToggle = !gravityToggle;
-        gravity = 3;
-        if (gravityToggle) { gravity = 4; }
+        gravity = 2;
+        if (gravityToggle) { gravity = 3; }
     }
 }

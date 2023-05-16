@@ -20,6 +20,7 @@ public class OutsideGravity : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("changing gravity value");
+        PlayerMovement.reverseGravity = false;
         playerObject.GetComponent<PlayerMovement>().GravityStrength();
     }
 }
