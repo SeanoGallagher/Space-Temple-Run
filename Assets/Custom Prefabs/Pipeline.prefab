@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2973393578358309298}
   - component: {fileID: 2973393578358309296}
-  - component: {fileID: 2973393578358309297}
   m_Layer: 0
   m_Name: Pipeline
   m_TagString: Untagged
@@ -52,23 +51,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.93642175, z: 0.69221497}
   m_Center: {x: 0, y: -0.031789124, z: -0.15389252}
---- !u!114 &2973393578358309297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2973393578358309299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 0}
-  charModel: {fileID: 0}
-  camAnim: {fileID: 0}
-  levelControl: {fileID: 0}
-  crashThud: {fileID: 0}
 --- !u!1001 &2973393577800323686
 PrefabInstance:
   m_ObjectHideFlags: 0

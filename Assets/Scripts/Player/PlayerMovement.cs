@@ -11,8 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public static bool comingDown = false;
     public static bool gettingup = false;
     public static bool reverseGravity = false;
-    public static bool inPanic = false;
-    public static int panicCount = 0;
     public GameObject playerObject;
     public GameObject alienObject;
     public GameObject cameraObject;
@@ -76,10 +74,6 @@ public class PlayerMovement : MonoBehaviour
         if (reverseGravity) { mytmp = -mytmp; } 
         if (jumping && !comingDown) { transform.Translate(mytmp * Time.deltaTime * gravity, Space.World); }
         if (sliding) { transform.position = new Vector3(transform.position.x, 0.9f, transform.position.z); }
-        /*if (!sliding && gettingup) { 
-            transform.position = new Vector3(transform.position.x, 1.5f, transform.position.z);
-            cameraObject.transform.localPosition = new Vector3(0f, 1.79f, -4.05f);
-        }*/
         // If you're still in the process of changing lanes, angle in that direction, otherwise no rotational angle.
         HandleGravity();
         if (changinglanes)

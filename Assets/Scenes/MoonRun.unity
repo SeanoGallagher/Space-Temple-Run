@@ -254,6 +254,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2973393578358309298, guid: 82048c73556267441b3f322ea596e713, type: 3}
   m_PrefabInstance: {fileID: 2973393578353039771}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5416795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 474890571}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6275888027546566116, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa28775ae35b7134cbc6c32f243a8ee0, type: 2}
+    - target: {fileID: 919132149155446097, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+      propertyPath: m_Name
+      value: Alien
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
 --- !u!1 &24683191
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,10 +600,9 @@ GameObject:
   - component: {fileID: 29943716}
   - component: {fileID: 29943715}
   - component: {fileID: 29943714}
-  - component: {fileID: 29943717}
   m_Layer: 0
   m_Name: Big Rock
-  m_TagString: Untagged
+  m_TagString: LObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,23 +686,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29943712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &29943717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29943712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!1 &38549935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1917,10 @@ PrefabInstance:
       value: Box3 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -1877,23 +1936,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 181593228}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &181593231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181593230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &181593232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2451,10 +2493,9 @@ GameObject:
   - component: {fileID: 212501284}
   - component: {fileID: 212501283}
   - component: {fileID: 212501282}
-  - component: {fileID: 212501285}
   m_Layer: 0
   m_Name: Big Rock
-  m_TagString: Untagged
+  m_TagString: LObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2538,23 +2579,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212501280}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &212501285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212501280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!1 &213684548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2978,26 +3002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1979773093}
     m_Modifications:
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 2973393578358309298, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3045,6 +3049,10 @@ PrefabInstance:
     - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_Name
       value: Pipeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82048c73556267441b3f322ea596e713, type: 3}
@@ -3676,10 +3684,9 @@ GameObject:
   - component: {fileID: 279505094}
   - component: {fileID: 279505093}
   - component: {fileID: 279505092}
-  - component: {fileID: 279505095}
   m_Layer: 0
   m_Name: Big Rock (2)
-  m_TagString: Untagged
+  m_TagString: LObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3763,23 +3770,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279505090}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &279505095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279505090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!1 &288561696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,36 +4348,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1527527227468396489, guid: 9ce165dd222504a7dada2f13901e2cbd, type: 3}
   m_PrefabInstance: {fileID: 1633234123}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &333777659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-  m_PrefabInstance: {fileID: 1673956854}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &333777660 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-  m_PrefabInstance: {fileID: 1673956854}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &333777661
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333777659}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d0863bef5fe934e49a7b0dc1b1d2435d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &335192471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,6 +4563,10 @@ PrefabInstance:
       value: Box3
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -4618,23 +4582,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 356644544}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &356644547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356644546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &356644548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4959,10 +4906,9 @@ GameObject:
   - component: {fileID: 390921094}
   - component: {fileID: 390921093}
   - component: {fileID: 390921092}
-  - component: {fileID: 390921091}
   m_Layer: 0
   m_Name: Big Rock
-  m_TagString: Untagged
+  m_TagString: LObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4983,23 +4929,6 @@ Transform:
   m_Father: {fileID: 1979773093}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &390921091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390921089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &390921092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6156,6 +6085,7 @@ GameObject:
   - component: {fileID: 474890568}
   - component: {fileID: 474890567}
   - component: {fileID: 474890572}
+  - component: {fileID: 474890573}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6176,7 +6106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 1233534177}
-  alienObject: {fileID: 333777659}
+  alienObject: {fileID: 1847898737}
   cameraObject: {fileID: 963194225}
   LeftMiddleRight: {x: -2.5, y: 0, z: 2.5}
   laneChangeSpeed: 3
@@ -6260,7 +6190,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   - {fileID: 1233534178}
-  - {fileID: 333777660}
+  - {fileID: 1847898738}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6282,6 +6212,26 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &474890573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474890566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 474890566}
+  charModel: {fileID: 1233534177}
+  camAnim: {fileID: 963194225}
+  levelControl: {fileID: 624699070}
+  alienObject: {fileID: 1847898737}
+  crashThud: {fileID: 1943440514}
+  inPanic: 0
+  panicCount: 0
 --- !u!1 &477130160
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,10 +6420,9 @@ GameObject:
   - component: {fileID: 490452593}
   - component: {fileID: 490452592}
   - component: {fileID: 490452591}
-  - component: {fileID: 490452594}
   m_Layer: 0
   m_Name: Big Rock (1)
-  m_TagString: Untagged
+  m_TagString: LObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6557,23 +6506,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490452589}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &490452594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490452589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!1 &493084306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6696,10 +6628,9 @@ GameObject:
   - component: {fileID: 493360059}
   - component: {fileID: 493360058}
   - component: {fileID: 493360057}
-  - component: {fileID: 493360056}
   m_Layer: 0
   m_Name: Small Rock
-  m_TagString: Untagged
+  m_TagString: SObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6720,23 +6651,6 @@ Transform:
   m_Father: {fileID: 1979773093}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &493360056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493360054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &493360057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6812,10 +6726,9 @@ GameObject:
   - component: {fileID: 495969410}
   - component: {fileID: 495969409}
   - component: {fileID: 495969408}
-  - component: {fileID: 495969411}
   m_Layer: 0
   m_Name: Small Rock (1)
-  m_TagString: Untagged
+  m_TagString: SObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6899,23 +6812,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495969406}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &495969411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495969406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!1001 &497688003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6983,26 +6879,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -7.98
       objectReference: {fileID: 0}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 3564714993535912758, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
 --- !u!4 &497688004 stripped
@@ -7143,26 +7023,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 609610094}
     m_Modifications:
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 2973393578358309298, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -7210,6 +7070,10 @@ PrefabInstance:
     - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_Name
       value: Pipeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82048c73556267441b3f322ea596e713, type: 3}
@@ -9276,6 +9140,10 @@ PrefabInstance:
       value: Box3 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -9291,23 +9159,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 657199976}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &657199979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657199978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &657199980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10373,6 +10224,10 @@ PrefabInstance:
       value: Box3 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -10388,23 +10243,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 725660495}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &725660498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725660497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &725660499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11140,6 +10978,10 @@ PrefabInstance:
       value: Box3 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -11155,23 +10997,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 768445494}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &768445497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768445496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &768445498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11776,6 +11601,10 @@ PrefabInstance:
       value: Box3 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -11791,23 +11620,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 823107723}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &823107726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823107725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &823107727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13200,6 +13012,10 @@ PrefabInstance:
       value: Box3 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -13215,23 +13031,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 1011441108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1011441111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011441110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1011441112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13320,26 +13119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Console_Wreckage
       objectReference: {fileID: 0}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 8279705045241857393, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
 --- !u!4 &1015374322 stripped
@@ -13513,10 +13296,9 @@ GameObject:
   - component: {fileID: 1023303984}
   - component: {fileID: 1023303983}
   - component: {fileID: 1023303982}
-  - component: {fileID: 1023303985}
   m_Layer: 0
   m_Name: Small Rock (1)
-  m_TagString: Untagged
+  m_TagString: SObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13600,23 +13382,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023303980}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1023303985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023303980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!4 &1031871917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9173647762674148995, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
@@ -13942,6 +13707,10 @@ PrefabInstance:
       value: Box3 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -13957,23 +13726,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 1055181533}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1055181536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055181535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1055181537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14165,6 +13917,10 @@ PrefabInstance:
       value: Box3 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -14180,23 +13936,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 1057396594}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1057396597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057396596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1057396598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15084,26 +14823,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1519955226}
     m_Modifications:
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 2973393578358309298, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -15155,6 +14874,10 @@ PrefabInstance:
     - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_Name
       value: Pipeline (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82048c73556267441b3f322ea596e713, type: 3}
@@ -15464,23 +15187,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
   m_PrefabInstance: {fileID: 1688479050}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1266779043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266779041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!114 &1266779044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16765,10 +16471,9 @@ GameObject:
   - component: {fileID: 1360479550}
   - component: {fileID: 1360479549}
   - component: {fileID: 1360479548}
-  - component: {fileID: 1360479551}
   m_Layer: 0
   m_Name: Small Rock
-  m_TagString: Untagged
+  m_TagString: SObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16852,23 +16557,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360479546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1360479551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360479546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!1001 &1367163758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16937,6 +16625,10 @@ PrefabInstance:
       value: Box3 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -16952,23 +16644,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 1367163758}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1367163761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367163760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1367163762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17415,10 +17090,9 @@ GameObject:
   - component: {fileID: 1398213826}
   - component: {fileID: 1398213825}
   - component: {fileID: 1398213824}
-  - component: {fileID: 1398213827}
   m_Layer: 0
   m_Name: Small Rock
-  m_TagString: Untagged
+  m_TagString: SObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17502,23 +17176,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398213822}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1398213827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398213822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!4 &1414517034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 71bb44319f15e0741846c4fad009f013, type: 3}
@@ -17991,6 +17648,10 @@ PrefabInstance:
       value: Box1
       objectReference: {fileID: 0}
     - target: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -18006,23 +17667,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
   m_PrefabInstance: {fileID: 1456095521}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1456095524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456095523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1456095525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18121,26 +17765,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792503881}
     m_Modifications:
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 9173647762674148995, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -18188,6 +17812,10 @@ PrefabInstance:
     - target: {fileID: 9173647762674148999, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
       propertyPath: m_Name
       value: Big Rock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173647762674148999, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 9173647762839082182, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20516,79 +20144,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669609622}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1673956854
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 474890571}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.14
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6275888027546566116, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 394c0f9ebc42b3e43aa2dfeea1d69800, type: 2}
-    - target: {fileID: 919132149155446097, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
-      propertyPath: m_Name
-      value: Sketchfab_2017_08_29_08_57_46
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb058fd41acae5d4d8130eeecb028299, type: 3}
 --- !u!1 &1677877640
 GameObject:
   m_ObjectHideFlags: 0
@@ -20786,6 +20341,10 @@ PrefabInstance:
     - target: {fileID: 100060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
       propertyPath: m_Name
       value: TurtleShellMeshPBR (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
       propertyPath: m_RootOrder
@@ -21352,26 +20911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall Rock
       objectReference: {fileID: 0}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 980807839338256995, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
 --- !u!4 &1748382809 stripped
@@ -22395,6 +21938,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843707157}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1847898737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+  m_PrefabInstance: {fileID: 5416795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1847898738 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a8c347e9a290d9c4e9257aa6e8a7a7b2, type: 3}
+  m_PrefabInstance: {fileID: 5416795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1847898739
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847898737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0863bef5fe934e49a7b0dc1b1d2435d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &1848628464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22667,6 +22240,10 @@ PrefabInstance:
       value: Box1
       objectReference: {fileID: 0}
     - target: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -22682,23 +22259,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
   m_PrefabInstance: {fileID: 1856397119}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1856397122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856397121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1856397123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22943,26 +22503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1519955226}
     m_Modifications:
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 2973393578358309298, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -23014,6 +22554,10 @@ PrefabInstance:
     - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_Name
       value: Pipeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82048c73556267441b3f322ea596e713, type: 3}
@@ -23325,10 +22869,9 @@ GameObject:
   - component: {fileID: 1916165283}
   - component: {fileID: 1916165282}
   - component: {fileID: 1916165281}
-  - component: {fileID: 1916165284}
   m_Layer: 0
   m_Name: Big Rock (1)
-  m_TagString: Untagged
+  m_TagString: LObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23412,23 +22955,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916165279}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1916165284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916165279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!4 &1924616424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1527527227468396489, guid: 9ce165dd222504a7dada2f13901e2cbd, type: 3}
@@ -23444,6 +22970,10 @@ PrefabInstance:
     - target: {fileID: 100060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
       propertyPath: m_Name
       value: TurtleShellMeshPBR (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400060, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
       propertyPath: m_RootOrder
@@ -23519,23 +23049,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedDivider: 1
   maxLeftRight: {x: -3.2, y: 3.4, z: 0}
---- !u!114 &1936758009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936758007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1936758010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23691,7 +23204,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0c1d6eb62a02404ebcf338208e2ff96, type: 3}
       propertyPath: m_LocalScale.x
@@ -24170,6 +23683,10 @@ PrefabInstance:
       value: Box3 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -24185,23 +23702,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 1988051601}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1988051604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988051603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &1988051605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25519,6 +25019,10 @@ PrefabInstance:
       value: Box1
       objectReference: {fileID: 0}
     - target: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -25534,23 +25038,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5814267717222989976, guid: 2340976c2c4724452a5f8c3cf4d34d6f, type: 3}
   m_PrefabInstance: {fileID: 2067844581}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2067844584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067844583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &2067844585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26474,6 +25961,10 @@ PrefabInstance:
       value: Box3 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -26489,23 +25980,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866197311699743921, guid: 8bfb4b7ce5f3a4a4d9f81ddf253d08a3, type: 3}
   m_PrefabInstance: {fileID: 2131315979}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2131315982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131315981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 474890566}
-  charModel: {fileID: 1233534177}
-  camAnim: {fileID: 963194225}
-  levelControl: {fileID: 624699070}
-  crashThud: {fileID: 1943440514}
 --- !u!65 &2131315983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26574,26 +26048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall Rock (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 980807839338256995, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
 --- !u!4 &2140138426 stripped
@@ -26656,26 +26114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall Rock
       objectReference: {fileID: 0}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 980807839338256998, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 980807839338256995, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1045311a4d6e52549adb2e4f01d08081, type: 3}
 --- !u!1001 &2973393578353039771
@@ -26685,26 +26127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792503881}
     m_Modifications:
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 2973393578358309297, guid: 82048c73556267441b3f322ea596e713, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 2973393578358309298, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -26752,6 +26174,10 @@ PrefabInstance:
     - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
       propertyPath: m_Name
       value: Pipeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973393578358309299, guid: 82048c73556267441b3f322ea596e713, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82048c73556267441b3f322ea596e713, type: 3}
@@ -26907,26 +26333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Rock
       objectReference: {fileID: 0}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 3564714993535912765, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 3564714993535912758, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
+      propertyPath: m_TagString
+      value: SObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb6897f3f6828947b143ac0032dc3b9, type: 3}
 --- !u!1001 &4376036280700265657
@@ -27004,26 +26414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Console_Wreckage
       objectReference: {fileID: 0}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 8725616508249765272, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
+    - target: {fileID: 8279705045241857393, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 912e2799a9aa40d4b927b4536b0a5ba2, type: 3}
 --- !u!1001 &9173647761675844398
@@ -27033,26 +26427,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792503881}
     m_Modifications:
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 963194225}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1233534177}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: crashThud
-      value: 
-      objectReference: {fileID: 1943440514}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 474890566}
-    - target: {fileID: 9173647762674148992, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
-      propertyPath: levelControl
-      value: 
-      objectReference: {fileID: 624699070}
     - target: {fileID: 9173647762674148995, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -27100,6 +26474,10 @@ PrefabInstance:
     - target: {fileID: 9173647762674148999, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
       propertyPath: m_Name
       value: Big Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173647762674148999, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
+      propertyPath: m_TagString
+      value: LObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 9173647762839082182, guid: 76a21e33b9d4cbd40b5795df02a9b8a3, type: 3}
       propertyPath: m_Materials.Array.data[0]

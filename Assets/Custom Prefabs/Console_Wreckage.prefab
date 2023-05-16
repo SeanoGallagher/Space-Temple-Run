@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4431503205585981374}
   - component: {fileID: 8936614204103632057}
-  - component: {fileID: 8725616508249765272}
   m_Layer: 0
   m_Name: Console_Wreckage
   m_TagString: Untagged
@@ -50,23 +49,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9732742, y: 1.7586281, z: 3.6845398}
   m_Center: {x: -0.18216324, y: 1.4487776, z: -14.624878}
---- !u!114 &8725616508249765272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8279705045241857393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 0}
-  charModel: {fileID: 0}
-  camAnim: {fileID: 0}
-  levelControl: {fileID: 0}
-  crashThud: {fileID: 0}
 --- !u!1001 &4376036279295024046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,6 +151,7 @@ MonoBehaviour:
   charModel: {fileID: 0}
   camAnim: {fileID: 0}
   levelControl: {fileID: 0}
+  alienObject: {fileID: 0}
   crashThud: {fileID: 0}
 --- !u!4 &4376036279295166522 stripped
 Transform:

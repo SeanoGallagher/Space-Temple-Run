@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9173647762674148994}
   - component: {fileID: 9173647762674148997}
   - component: {fileID: 9173647762674148996}
-  - component: {fileID: 9173647762674148992}
   m_Layer: 0
   m_Name: Big Rock
   m_TagString: Untagged
@@ -99,23 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9173647762674148992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9173647762674148999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718da55531f2ec046b31c3ca3301a878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 0}
-  charModel: {fileID: 0}
-  camAnim: {fileID: 0}
-  levelControl: {fileID: 0}
-  crashThud: {fileID: 0}
 --- !u!1 &9173647762839082185
 GameObject:
   m_ObjectHideFlags: 0
