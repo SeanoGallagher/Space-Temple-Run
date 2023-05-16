@@ -11,8 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public static bool comingDown = false;
     public static bool gettingup = false;
     public static bool reverseGravity = false;
+    public static bool inPanic = false;
+    public static int panicCount = 0;
     public GameObject playerObject;
     public GameObject alienObject;
+    public GameObject cameraObject;
 
     public Vector3 LeftMiddleRight = new Vector3(-2.5f, 0f, 2.5f);
     private Vector3 turnLeft = new Vector3(0, -25f, 0);
@@ -71,16 +74,23 @@ public class PlayerMovement : MonoBehaviour
         // If jumping, fight against gravity, if sliding then slide.
         Vector3 mytmp = Vector3.up;
         if (reverseGravity) { mytmp = -mytmp; } 
-        if ((jumping && !comingDown) || (sliding && !gettingup)) { transform.Translate(mytmp * Time.deltaTime * gravity, Space.World); }
+        if (jumping && !comingDown) { transform.Translate(mytmp * Time.deltaTime * gravity, Space.World); }
+        if (sliding) { transform.position = new Vector3(transform.position.x, 0.9f, transform.position.z); }
+        /*if (!sliding && gettingup) { 
+            transform.position = new Vector3(transform.position.x, 1.5f, transform.position.z);
+            cameraObject.transform.localPosition = new Vector3(0f, 1.79f, -4.05f);
+        }*/
         // If you're still in the process of changing lanes, angle in that direction, otherwise no rotational angle.
         HandleGravity();
         if (changinglanes)
         {
             transform.position = Vector3.MoveTowards(transform.position, newLane, Time.deltaTime * laneChangeSpeed);
             playerObject.transform.localEulerAngles = turnDirection;
+            alienObject.transform.localEulerAngles = turnDirection;
         }
         else {
             playerObject.transform.localEulerAngles = Vector3.zero;
+            alienObject.transform.localEulerAngles = Vector3.zero;
         }
 
     }
@@ -172,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
         float sectwo = 0.4f;
         if (gravityToggle) { sec = 0.8f; sectwo = 1.2f; }
         if (canMove) { playerObject.GetComponent<Animator>().Play("Astronaut_Jump"); }
+        alienObject.GetComponent<Animator>().Play("Jump");
         yield return new WaitForSeconds(sec); 
         if (canMove && gravityToggle) { playerObject.GetComponent<Animator>().Play("Astronaut_Jump"); }
             //alienObject.GetComponent<Animator>().Play("Jump");
@@ -179,27 +190,34 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         if (canMove && gravityToggle) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
         yield return new WaitForSeconds(sectwo);
-        //alienObject.GetComponent<Animator>().Play("Run");
-        //jumping = false;
-        //comingDown = false;
+        alienObject.GetComponent<Animator>().Play("Run");
+        jumping = false;
+        comingDown = false;
         if (canMove) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
     }
 
     IEnumerator SlideSequence()
     {
         sliding = true;
-        if (canMove)
-        {
-            playerObject.GetComponent<Animator>().Play("Astronaut_Slide");
-        }
+        transform.localScale = new Vector3(0.8f, 0.75f, 0.8f);
+        transform.position = new Vector3(transform.position.x, 0.9f, transform.position.z);
+        cameraObject.transform.localPosition = new Vector3(0f, 4f, -4.05f);
+        playerObject.transform.localScale = new Vector3(1.5f, 2f, 1.5f);
+        alienObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        if (canMove) { playerObject.GetComponent<Animator>().Play("Astronaut_Slide"); }
+        alienObject.GetComponent<Animator>().Play("Slide");
         yield return new WaitForSeconds(0.6f);
-        //alienObject.GetComponent<Animator>().Play("Slide");
         gettingup = true;
         yield return new WaitForSeconds(0.45f);
-        //alienObject.GetComponent<Animator>().Play("Run");
-        //sliding = false;
-        //gettingup = false;
+        alienObject.GetComponent<Animator>().Play("Run");
         if (canMove) { playerObject.GetComponent<Animator>().Play("Astonaut_Run"); }
+        sliding = false;
+        gettingup = false;
+        transform.localScale = new Vector3(0.8f, 1.5f, 0.8f);
+        transform.position = new Vector3(transform.position.x, 1.25f, transform.position.z);
+        cameraObject.transform.localPosition = new Vector3(0f, 1.79f, -4.05f);
+        playerObject.transform.localScale = new Vector3(1.5f, 1f, 1.5f);
+        alienObject.transform.localScale = new Vector3(1.5f, 0.75f, 1.5f);
     }
 
     public void GravityStrength()
