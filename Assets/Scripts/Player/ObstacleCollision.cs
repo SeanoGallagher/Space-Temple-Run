@@ -19,7 +19,7 @@ public class ObstacleCollision : MonoBehaviour
 
     void Update()
     {
-        if (inPanic)
+        if (inPanic || gameOver)
         {
             alienObject.transform.localPosition = Vector3.MoveTowards(alienObject.transform.localPosition, new Vector3(0f, -0.51f, -1.14f), Time.deltaTime * 3);
         }
@@ -36,6 +36,8 @@ public class ObstacleCollision : MonoBehaviour
             inPanic = true;
             panicCount += 1;
             panicCanvas.SetActive(true);
+            crashThud.Play();
+            charModel.GetComponent<Animator>().Play("Astronaut_Jump");
             StartCoroutine(Panic());
         }
         else if (other.gameObject.CompareTag("LObstacle") || (other.gameObject.CompareTag("SObstacle") && (inPanic || panicCount == 3)))
