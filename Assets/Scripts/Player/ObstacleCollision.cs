@@ -10,10 +10,24 @@ public class ObstacleCollision : MonoBehaviour
     public GameObject camAnim;
     public GameObject levelControl;
     public GameObject alienObject;
+    public GameObject panicCanvas;
     public AudioSource crashThud;
-
+     
     public bool inPanic = false;
     public int panicCount = 0;
+    private bool gameOver = false;
+
+    void Update()
+    {
+        if (inPanic)
+        {
+            alienObject.transform.localPosition = Vector3.MoveTowards(alienObject.transform.localPosition, new Vector3(0f, -0.51f, -1.14f), Time.deltaTime * 3);
+        }
+        else
+        {
+            alienObject.transform.localPosition = Vector3.MoveTowards(alienObject.transform.localPosition, new Vector3(0f, -0.51f, -3f), Time.deltaTime * 3);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -21,15 +35,18 @@ public class ObstacleCollision : MonoBehaviour
         {
             inPanic = true;
             panicCount += 1;
+            panicCanvas.SetActive(true);
             StartCoroutine(Panic());
         }
         else if (other.gameObject.CompareTag("LObstacle") || (other.gameObject.CompareTag("SObstacle") && (inPanic || panicCount == 3)))
         {
             bool jumping = PlayerMovement.jumping;
+            gameOver = true;
             PlayerMovement.canMove = false;
             thePlayer.GetComponent<PlayerMovement>().enabled = false;
             StopCoroutine("JumpSequence");
             StopCoroutine("SlideSequence");
+            StopCoroutine("Panic");
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
             if (jumping)
             {
@@ -43,14 +60,19 @@ public class ObstacleCollision : MonoBehaviour
             crashThud.Play();
             camAnim.GetComponent<Animator>().enabled = false;
             levelControl.GetComponent<EndRunSequence>().enabled = true;
+            alienObject.GetComponent<Animator>().Play("Idle");
         }
     }
 
     IEnumerator Panic()
     {
-        alienObject.transform.localPosition = new Vector3(0f, -0.51f, -1.14f);
         yield return new WaitForSeconds(10);
-        inPanic = false;
-        alienObject.transform.localPosition = new Vector3(0f, -0.51f, -3f);
+        if (!gameOver)
+        {
+            panicCanvas.GetComponent<Animator>().Play("FadeIn");
+            inPanic = false;
+            yield return new WaitForSeconds(1);
+            panicCanvas.SetActive(false);
+        }
     }
 }
