@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject alienObject;
     public GameObject cameraObject;
 
-    public UnlockableMatrix unlockableMatrix;
+    public static UnlockableMatrix unlockableMatrix = new UnlockableMatrix();
 
     public Vector3 LeftMiddleRight = new Vector3(-2.5f, 0f, 2.5f);
     private Vector3 turnLeft = new Vector3(0, -25f, 0);
@@ -38,7 +38,8 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpPressed = false;
     private bool slidePressed = false;
     // Start is called before the first frame update
-    void Start(){ 
+    void Start(){
+        AchievementControls();
         curfloor = floor; 
         GravityStrength(); 
         moveSpeed = 5; 
@@ -255,6 +256,25 @@ public class PlayerMovement : MonoBehaviour
         if (PlayerPrefs.GetInt("revPerk") == 1)
         {
             unlockableMatrix.hasReversePerk = true;
+        }
+    }
+
+    private void AchievementControls()
+    {
+        unlockableMatrix.hasDiedOnce = false;
+        unlockableMatrix.hasRunHundredSteps = false;
+        unlockableMatrix.hasCollectedHundredCoins = false;
+        if (PlayerPrefs.GetInt("hasDiedOnce") == 1)
+        {
+            unlockableMatrix.hasDiedOnce = true;
+        }
+        if (PlayerPrefs.GetInt("hasRunHundredSteps") == 1)
+        {
+            unlockableMatrix.hasRunHundredSteps = true;
+        }
+        if (PlayerPrefs.GetInt("hasCollectedHundredCoins") == 1)
+        {
+            unlockableMatrix.hasCollectedHundredCoins = true;
         }
     }
 }

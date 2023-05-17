@@ -8,4 +8,9 @@ public class UnlockableMatrix
     public bool hasFastPerk;
     public bool hasGravPerk;
     public bool hasReversePerk;
+
+    //Achievements
+    public bool hasDiedOnce = false;
+    public bool hasRunHundredSteps = false;
+    public bool hasCollectedHundredCoins = false;
 }

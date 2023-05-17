@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Madhur.InfoPopup;
 
 public class ObstacleCollision : MonoBehaviour
 {
@@ -71,6 +72,14 @@ public class ObstacleCollision : MonoBehaviour
             camAnim.GetComponent<Animator>().enabled = false;
             levelControl.GetComponent<EndRunSequence>().enabled = true;
             alienObject.GetComponent<Animator>().Play("Idle");
+            if (!PlayerMovement.unlockableMatrix.hasDiedOnce)
+            {
+                PlayerMovement.unlockableMatrix.hasDiedOnce = true;
+                PlayerPrefs.SetInt("hasDiedOnce", 1);
+                Debug.Log("You died for the first time!");
+                InfoPopupUtil.ShowInformation("Achievement Unlocked: First Death!");
+
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Madhur.InfoPopup;
 
 public class CollectCoin : MonoBehaviour
 {
@@ -21,6 +22,14 @@ public class CollectCoin : MonoBehaviour
     {
         coinFX.Play();
         CollectableControl.coinCount += addCoin;
+        if (!PlayerMovement.unlockableMatrix.hasCollectedHundredCoins && CollectableControl.coinCount >= 100)
+        {
+            PlayerMovement.unlockableMatrix.hasCollectedHundredCoins = true;
+            PlayerPrefs.SetInt("hasCollectedHundredCoins", 1);
+            Debug.Log("Collected 100 Coins!");
+            InfoPopupUtil.ShowInformation("Achievement Unlocked: Collected 100 Coins!");
+
+        }
         this.gameObject.SetActive(false);
     }
 }

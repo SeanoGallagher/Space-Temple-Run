@@ -12,6 +12,8 @@ public class StoreControl : MonoBehaviour
     private int coins = 0;
     public GameObject store_Coin;
     private TMP_Text store_CoinText;
+
+    public GameObject achievementcontrol;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,6 +120,7 @@ public class StoreControl : MonoBehaviour
     public void WipeMatrix()
     {
         unlockableMatrix = new UnlockableMatrix();
+        achievementcontrol.GetComponent<AchievementControl>().WipeMatrix();
         RerenderShop();
     }
 
