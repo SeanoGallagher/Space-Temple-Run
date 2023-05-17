@@ -32,7 +32,7 @@ public class GenerateLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (creatingSection == false && totalsections < 8)
+        if (creatingSection == false && totalsections < 5)
         {
             creatingSection = true;
             StartCoroutine(GenerateSection());
