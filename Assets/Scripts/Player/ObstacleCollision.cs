@@ -17,6 +17,7 @@ public class ObstacleCollision : MonoBehaviour
     public bool inPanic = false;
     public int panicCount = 0;
     private bool gameOver = false;
+    private Vector3 turnRight = new Vector3(0, 25f, 0);
 
     void Update()
     {
@@ -28,6 +29,11 @@ public class ObstacleCollision : MonoBehaviour
         {
             alienObject.transform.localPosition = Vector3.MoveTowards(alienObject.transform.localPosition, new Vector3(0f, -0.51f, -3f), Time.deltaTime * 3);
         }
+    }
+
+    void FixedUpdate()
+    {
+        if (gameOver) { alienObject.transform.Rotate(turnRight); }
     }
 
     void OnTriggerEnter(Collider other)
@@ -70,8 +76,10 @@ public class ObstacleCollision : MonoBehaviour
 
     IEnumerator Panic()
     {
-        yield return new WaitForSeconds(10);
-        if (!gameOver)
+        yield return new WaitForSeconds(1);
+        charModel.GetComponent<Animator>().Play("Astonaut_Run");
+        yield return new WaitForSeconds(9);
+        if (!gameOver && panicCount < 3)
         {
             panicCanvas.GetComponent<Animator>().Play("FadeIn");
             inPanic = false;
