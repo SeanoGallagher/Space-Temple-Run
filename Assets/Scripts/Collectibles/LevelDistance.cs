@@ -16,7 +16,7 @@ public class LevelDistance : MonoBehaviour
     {
         hiscore = PlayerPrefs.GetInt("distanceCount");
     }
-    void Update()
+    void FixedUpdate()
     {
         if(!addingDis && PlayerMovement.canMove){
             addingDis = true;

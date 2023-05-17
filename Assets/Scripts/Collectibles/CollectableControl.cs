@@ -20,7 +20,7 @@ public class CollectableControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         coinCountDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = "" + coinCount;
         coinEndDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = (coinCount > hiscore) ? "" + coinCount + "  <b><color=red>High Score!</color></b>" : "" + coinCount;
