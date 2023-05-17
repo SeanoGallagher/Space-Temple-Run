@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public TMP_Text m_DistanceText;
     public TMP_Text m_hint;
     public TMP_Text m_CurrentCoinText;
+    public GameObject store;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Wiping it all");
         PlayerPrefs.DeleteAll();
+        store.GetComponent<StoreControl>().WipeMatrix();
         UpdateText();
     }
 

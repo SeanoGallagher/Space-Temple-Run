@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject alienObject;
     public GameObject cameraObject;
 
+    public UnlockableMatrix unlockableMatrix;
+
     public Vector3 LeftMiddleRight = new Vector3(-2.5f, 0f, 2.5f);
     private Vector3 turnLeft = new Vector3(0, -25f, 0);
     private Vector3 turnRight = new Vector3(0, 25f, 0);
@@ -36,7 +38,14 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpPressed = false;
     private bool slidePressed = false;
     // Start is called before the first frame update
-    void Start(){ curfloor = floor; GravityStrength(); moveSpeed = 5; laneChangeSpeed = 3; }
+    void Start(){ 
+        curfloor = floor; 
+        GravityStrength(); 
+        moveSpeed = 5; 
+        laneChangeSpeed = 3;
+        PowerupControls();
+        if (unlockableMatrix.hasTurnPerk) { laneChangeSpeed = 6; }
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,10 +54,10 @@ public class PlayerMovement : MonoBehaviour
         if (!canMove) { return; }
 
         //Debugging button presses for certain things
-        if (Input.GetKeyUp(KeyCode.Q)) { moveSpeed = Mathf.Min(moveSpeed+1, 10); }
-        if (Input.GetKeyUp(KeyCode.E)) { moveSpeed = Mathf.Max(moveSpeed - 1, 1); }
-        if (Input.GetKeyUp(KeyCode.Z)) { reverseGravity = !reverseGravity; }
-        if (Input.GetKeyUp(KeyCode.R)) { GravityStrength(); }
+        if (Input.GetKeyUp(KeyCode.Q) && unlockableMatrix.hasFastPerk) { moveSpeed = Mathf.Min(moveSpeed+1, 10); }
+        if (Input.GetKeyUp(KeyCode.E) && unlockableMatrix.hasSlowPerk) { moveSpeed = Mathf.Max(moveSpeed - 1, 1); }
+        if (Input.GetKeyUp(KeyCode.Z) && unlockableMatrix.hasGravPerk) { reverseGravity = !reverseGravity; }
+        if (Input.GetKeyUp(KeyCode.R) && unlockableMatrix.hasReversePerk) { GravityStrength(); }
 
 
 
@@ -219,5 +228,33 @@ public class PlayerMovement : MonoBehaviour
         gravityToggle = !gravityToggle;
         gravity = 2;
         if (gravityToggle) { gravity = 3; }
+    }
+
+    private void PowerupControls()
+    {
+        if (PlayerPrefs.GetInt("doubleCoins") == 1)
+        {
+            unlockableMatrix.hasDoubleCoinPerk = true;
+        }
+        if (PlayerPrefs.GetInt("turnPerk") == 1)
+        {
+            unlockableMatrix.hasTurnPerk = true;
+        }
+        if (PlayerPrefs.GetInt("slowPerk") == 1)
+        {
+            unlockableMatrix.hasSlowPerk = true;
+        }
+        if (PlayerPrefs.GetInt("fastPerk") == 1)
+        {
+            unlockableMatrix.hasFastPerk = true;
+        }
+        if (PlayerPrefs.GetInt("gravPerk") == 1)
+        {
+            unlockableMatrix.hasGravPerk = true;
+        }
+        if (PlayerPrefs.GetInt("revPerk") == 1)
+        {
+            unlockableMatrix.hasReversePerk = true;
+        }
     }
 }
