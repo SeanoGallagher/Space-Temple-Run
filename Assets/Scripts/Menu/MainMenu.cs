@@ -49,4 +49,9 @@ public class MainMenu : MonoBehaviour
         m_DistanceText.text = "" + PlayerPrefs.GetInt("distanceCount");
         m_CurrentCoinText.text = "" + PlayerPrefs.GetInt("totalCoins");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
