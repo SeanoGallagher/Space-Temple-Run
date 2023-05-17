@@ -12,6 +12,7 @@ public class ObstacleCollision : MonoBehaviour
     public GameObject alienObject;
     public GameObject panicCanvas;
     public AudioSource crashThud;
+    public GameObject panicCounter;
      
     public bool inPanic = false;
     public int panicCount = 0;
@@ -34,6 +35,7 @@ public class ObstacleCollision : MonoBehaviour
         if (other.gameObject.CompareTag("SObstacle") && inPanic == false && panicCount < 3)
         {
             inPanic = true;
+            panicCounter.transform.GetChild(panicCount).gameObject.SetActive(true);
             panicCount += 1;
             panicCanvas.SetActive(true);
             crashThud.Play();
