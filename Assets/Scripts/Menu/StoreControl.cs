@@ -7,7 +7,7 @@ using TMPro;
 public class StoreControl : MonoBehaviour
 {
     public UnlockableMatrix unlockableMatrix;
-    public GameObject coinButton, turnButton, slowButton, fastButton, gravButton, revButton;
+    public GameObject coinButton, turnButton, slowButton, fastButton, gravButton, revButton, modelButton;
 
     private int coins = 0;
     public GameObject store_Coin;
@@ -104,6 +104,16 @@ public class StoreControl : MonoBehaviour
         }
         RerenderShop();
     }
+    public void BuyModel()
+    {
+        if(coins >= 100000)
+        {
+            coins -= 100000;
+            PlayerPrefs.SetInt("totalCoins", coins);
+            PlayerPrefs.SetInt("modelPerk", 1);
+            unlockableMatrix.hasModelPerk = true;
+        }
+    }
 
     private void RerenderShop()
     {
@@ -115,6 +125,7 @@ public class StoreControl : MonoBehaviour
         checkButtons(unlockableMatrix.hasFastPerk, fastButton);
         checkButtons(unlockableMatrix.hasGravPerk, gravButton);
         checkButtons(unlockableMatrix.hasReversePerk, revButton);
+        checkButtons(unlockableMatrix.hasModelPerk, modelButton);
     }
 
     public void WipeMatrix()
@@ -147,6 +158,10 @@ public class StoreControl : MonoBehaviour
             unlockableMatrix.hasGravPerk = true;
         }
         if (PlayerPrefs.GetInt("revPerk") == 1)
+        {
+            unlockableMatrix.hasReversePerk = true;
+        }
+        if (PlayerPrefs.GetInt("modelPerk") == 1)
         {
             unlockableMatrix.hasReversePerk = true;
         }

@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerObject;
     public GameObject alienObject;
     public GameObject cameraObject;
+    public GameObject mainPlayerObject;
+    public GameObject unlockablePlayerObject;
 
     public static UnlockableMatrix unlockableMatrix = new UnlockableMatrix();
 
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         laneChangeSpeed = 3;
         PowerupControls();
         if (unlockableMatrix.hasTurnPerk) { laneChangeSpeed = 6; }
+        if (unlockableMatrix.hasModelPerk) { ChangeModel(); }
     }
 
     // Update is called once per frame
@@ -257,6 +260,10 @@ public class PlayerMovement : MonoBehaviour
         {
             unlockableMatrix.hasReversePerk = true;
         }
+        if(PlayerPrefs.GetInt("modelPerk") == 1)
+        {
+            unlockableMatrix.hasModelPerk = true;
+        }
     }
 
     private void AchievementControls()
@@ -276,5 +283,11 @@ public class PlayerMovement : MonoBehaviour
         {
             unlockableMatrix.hasCollectedHundredCoins = true;
         }
+    }
+
+    private void ChangeModel()
+    {
+        mainPlayerObject.SetActive(false);
+        unlockablePlayerObject.SetActive(true);
     }
 }
